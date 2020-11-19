@@ -29,13 +29,13 @@ int QueueItemCount(const Queue * pq)
 	return pq->items; 
 }
 
-bool EnQueue(Item item, Queue * pq)			// "Item" as just int types??
+bool EnQueue(Item item, Queue * pq)					// "Item" as just int types??
 {
-	Node * pnew;							// Need some explanation
-	if (QueueIsFull(pq))					// What does 'pq' mean ??
-											// How it's working? Is it formal param or actual arg? 
+	Node * pnew;									// Need some explanation
+	if (QueueIsFull(pq))							// What does 'pq' mean ??
+													// How it's working? Is it formal param or actual arg? 
 		return false;
-	pnew = (Node *) malloc(sizeof(Node));	// Need some explanation
+	pnew = (Node *) malloc(sizeof(Node));			// Need some explanation
 	if (pnew == NULL)
 	{
 		fprintf(stderr, "Can't allocate memory\n");
@@ -44,11 +44,11 @@ bool EnQueue(Item item, Queue * pq)			// "Item" as just int types??
 	CopyToNode(item, pnew);
 	pnew->next = NULL;
 	if (QueueIsEmpty(pq))
-		pq->front = pnew;					// Element add to start of queue
+		pq->front = pnew;							// Element add to start of queue
 	else
-		pq->rear->next = pnew;				// Binding with end of queue
-	pq->rear = pnew;						// Location end of queue
-	pq->items++;							// Increase by 1 amount of elements in queue
+		pq->rear->next = pnew;						// Binding with end of queue
+	pq->rear = pnew;								// Location end of queue
+	pq->items++;									// Increase by 1 amount of elements in queue
 
 	return true;
 }

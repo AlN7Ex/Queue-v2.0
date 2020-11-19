@@ -24,12 +24,12 @@ typedef struct queue
 	int items;
 } Queue;
 
-void InitializeQueue (Queue * pq);			// Empty initialize 
-bool QueueIsFull (const Queue *pq);			// Check for fill
-bool QueueIsEmpty (const Queue * pq);		// Check for empty
-int QueueItemCount (const Queue * pq);		// Definition amount of elements in queue 
-bool EnQueue (Item item, Queue * pq);		// Add element in the end of queue
-bool DeQueue (Item * pitem, Queue * pq);	// Delete element from start of queue
-void EmptyTheQueue (Queue * pq);			// Erase queue
+void InitializeQueue (Queue * pq);				// Empty initialize 
+bool QueueIsFull (const Queue *pq);				// Check for fill
+bool QueueIsEmpty (const Queue * pq);			// Check for empty
+int QueueItemCount (const Queue * pq);			// Definition amount of elements in queue 
+bool EnQueue (Item item, Queue * pq);			// Add element in the end of queue
+bool DeQueue (Item * pitem, Queue * pq);		// Delete element from start of queue
+void EmptyTheQueue (Queue * pq);				// Erase queue
 
 #endif
